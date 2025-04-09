@@ -19,7 +19,6 @@ const Page = ({ children }) => {
         animate="animate"
         exit="exit"
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="min-h-screen p-4"
       >
         {children}
       </motion.div>
