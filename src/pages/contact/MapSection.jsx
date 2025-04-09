@@ -1,11 +1,13 @@
 // src/sections/MapSection.jsx
 import React from 'react';
+import Section from './../../container/Section';
+import Heading from './../../components/Heading'
 
 const MapSection = () => {
   return (
-    <section className="bg-white py-20">
+    <Section>
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-semibold mb-8">Find Us</h2>
+        <Heading>Find Us</Heading>
         {/* Embed Google Map */}
         <div className="h-72">
           <iframe
@@ -20,7 +22,7 @@ const MapSection = () => {
           ></iframe>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

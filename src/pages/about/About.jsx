@@ -1,15 +1,16 @@
 // src/pages/AboutPage.jsx
 import React from 'react';
 import AboutSection from './AboutSection';
-import TeamSection from './TeamSection';
 import MissionSection from './MissionSection';
 import TimelineSection from './TimelineSection';
 import LeadForm from './LeadForm';
 import AgentsSection from './AgentsSection';
+import Page from '../../container/Page'
+
 
 const About  = () => {
   return (
-    <>
+    <Page>
       {/* About Section */}
       <AboutSection />
 
@@ -24,7 +25,7 @@ const About  = () => {
       
       {/* Lead Form */}
       <LeadForm />
-    </>
+    </Page>
   );
 };
 

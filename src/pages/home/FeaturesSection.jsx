@@ -1,12 +1,14 @@
 // src/components/FeaturesSection.jsx
 import React from 'react';
+import Section from '../../container/Section';
+import Button from './../../components/Button';
 
 const FeaturesSection = () => {
   return (
-    <section className="bg-gray-100 py-24">
+    <Section variant='secondary'>
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-12">
-          Why Buyers and Sellers Choose <span className="text-teal-600">Gark Edge</span>
+          Why Buyers and Sellers Choose <span className="text-(--color-primary)">Gark Edge</span>
         </h2>
   
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
@@ -41,14 +43,13 @@ const FeaturesSection = () => {
           </div>
         </div>
   
-        <a
-          href="#contact"
-          className="inline-block bg-teal-600 text-white px-8 py-3 rounded-full hover:bg-teal-700 transition font-medium"
-        >
-          Connect with an Agent
-        </a>
+        <div className='flex justify-center'>
+          <Button variant='primary' type="link" to="/contact">
+            Connect with an Agent
+          </Button>
+        </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

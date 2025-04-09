@@ -1,24 +1,27 @@
 // src/components/HeroSection.jsx
 import React from 'react';
+import Section from './../../container/Section';
+import Heading from './../../components/Heading';
+import Body from './../../components/Body';
+import Button from './../../components/Button';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-white text-black py-24">
+    <Section>
       <div className="container mx-auto px-6 text-center">
-      <h1 className="text-5xl font-semibold leading-tight mb-4">
-        Your Perfect Home Is Just a Click Away
-      </h1>
-      <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-        Explore exclusive listings tailored to your lifestyle. Whether you're buying or selling, Gark Edge makes the process seamless and successful.
-      </p>
-      <a
-        href="#listings"
-        className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition duration-300"
-      >
-        Start Your Search
-      </a>
+        <Heading type="h1">
+          Your Perfect Home Is Just a Click Away
+        </Heading>
+        <Body>
+          Explore exclusive listings tailored to your lifestyle. Whether you're buying or selling, Gark Edge makes the process seamless and successful.
+        </Body>
+        <div className='flex justify-center'>
+          <Button type="link" to="/listings">
+            Start Your Search
+          </Button>
+        </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

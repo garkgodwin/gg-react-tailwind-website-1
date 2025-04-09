@@ -1,13 +1,60 @@
 @import "tailwindcss";
 
-@theme {
-  --color-brand: #0d9488;
-  --color-brand-dark: #0f766e;
-  --color-brand-light: #99f6e4;
+:root{
+  --color-primary-dark: #0f766e;
+  --color-primary: #0d9488;
+  --color-primary-light: #99f6e4;
 
-  --color-background-soft: #f5f5f4;
+  --color-secondary-dark: #f3f4f6;
+  --color-secondary: #e6e6e6;
+  --color-secondary-light: #ffffff;
 
-  --color-text-brand: #0d9488;
   --color-text-heading: #27272a;
   --color-text-body: #52525b;
+}
+
+/* @theme {
+  --color-primary-dark: #0f766e;
+  --color-primary: #0d9488;
+  --color-primary-light: #99f6e4;
+
+  --color-secondary-dark: #d4d3d3;
+  --color-secondary: #e6e6e6;
+  --color-secondary-light: #f3f3f3;
+
+  --color-text-heading: #27272a;
+  --color-text-body: #52525b;
+} */
+
+.thing{
+  background-color: #0d9488;
+  background-color: #0f766e;
+  background-color: #99f6e4;
+  background-color: #f5f5f4;
+  background-color: #0d9488;
+  background-color: #27272a;
+  background-color: #52525b;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+button, a{
+  cursor: pointer;
+}
+
+
+/* SECTIONS */
+section.primary .heading,section.secondary .heading {
+  color: var(--color-text-heading);
+}
+section.primary .body,section.secondary .body{
+  color: var(--color-text-body);
+}
+section.tertiary .heading{
+  color: var(--color-secondary-light)
+}
+section.tertiary .body{
+  color: var(--color-secondary)
 }

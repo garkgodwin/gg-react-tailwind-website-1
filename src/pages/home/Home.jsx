@@ -4,10 +4,11 @@ import FeaturesSection from './FeaturesSection';
 import AboutSection from './AboutSection';
 import TestimonialSection from './TestimonialSection';
 import PricingSection from './PricingSection';
+import Page from '../../container/Page'
 
 const Home = () => {
   return (
-    <>
+    <Page>
       {/* Hero Section */}
       <HeroSection />
 
@@ -22,7 +23,7 @@ const Home = () => {
 
       {/* Pricing Section */}
       <PricingSection />
-    </>
+    </Page>
   );
 }
 

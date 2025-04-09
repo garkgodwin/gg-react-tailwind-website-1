@@ -13,7 +13,7 @@ const Navbar = () => {
         {/* Logo and Brand */}
         <NavLink
           to="/"
-          className="flex items-center space-x-2 text-2xl font-extrabold tracking-tight text-brand"
+          className="flex items-center space-x-2 text-2xl font-extrabold tracking-tight text-(--color-primary)"
         >
           <img src={garkLogo} alt="Gark Edge logo" className="w-8 h-8" />
           <span>Gark Edge</span>
@@ -21,13 +21,13 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6 font-medium items-center text-text-body">
-          <NavLink to="/" className="hover:text-brand transition">Home</NavLink>
-          <NavLink to="/about" className="hover:text-brand transition">About</NavLink>
-          <NavLink to="/listings" className="hover:text-brand transition">Listings</NavLink>
-          <NavLink to="/contact" className="hover:text-brand transition">Contact</NavLink>
+          <NavLink to="/" className="hover:text-(--color-primary) transition">Home</NavLink>
+          <NavLink to="/about" className="hover:text-(--color-primary) transition">About</NavLink>
+          <NavLink to="/listings" className="hover:text-(--color-primary) transition">Listings</NavLink>
+          <NavLink to="/contact" className="hover:text-(--color-primary) transition">Contact</NavLink>
           <NavLink
             to="/contact"
-            className="bg-brand text-white px-4 py-2 rounded-full hover:bg-brand-dark transition text-sm"
+            className="bg-(--color-primary) text-white px-4 py-2 rounded-full hover:bg-(--color-primary-dark) transition text-sm"
           >
             Get Started
           </NavLink>
@@ -36,7 +36,7 @@ const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <button onClick={toggleMenu} className="md:hidden focus:outline-none">
           <svg
-            className="w-6 h-6 text-brand"
+            className="w-6 h-6 text-(--color-primary)"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -63,10 +63,10 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white px-6 py-4 space-y-4 text-center font-medium text-text-body">
-          <NavLink to="/" className="block hover:text-brand" onClick={toggleMenu}>Home</NavLink>
-          <NavLink to="/about" className="block hover:text-brand" onClick={toggleMenu}>About</NavLink>
-          <NavLink to="/listings" className="block hover:text-brand" onClick={toggleMenu}>Listings</NavLink>
-          <NavLink to="/contact" className="block hover:text-brand" onClick={toggleMenu}>Contact</NavLink>
+          <NavLink to="/" className="block hover:text-(--color-primary)" onClick={toggleMenu}>Home</NavLink>
+          <NavLink to="/about" className="block hover:text-(--color-primary)" onClick={toggleMenu}>About</NavLink>
+          <NavLink to="/listings" className="block hover:text-(--color-primary)" onClick={toggleMenu}>Listings</NavLink>
+          <NavLink to="/contact" className="block hover:text-(--color-primary)" onClick={toggleMenu}>Contact</NavLink>
           <NavLink
             to="/contact"
             className="inline-block bg-brand text-white px-4 py-2 rounded-full hover:bg-brand-dark transition"

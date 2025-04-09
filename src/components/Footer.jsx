@@ -7,8 +7,7 @@ import xWhite from '../assets/x_logo/logo-white.png';
 const Footer = () => {
   return (
     <footer
-  className="py-16 mt-20 text-white"
-  style={{ backgroundColor: 'var(--color-brand)' }}
+  className="py-16 mt-20 text-white bg-(--color-primary)"
 >
   <div className="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
     {/* Column 1: Brand */}
@@ -24,32 +23,32 @@ const Footer = () => {
       <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
       <ul className="space-y-2 text-sm">
         <li>
-          <NavLink to="/" className="hover:text-brand-light transition">
+          <NavLink to="/" className="hover:text-(--color-primary-light) transition">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" className="hover:text-brand-light transition">
+          <NavLink to="/about" className="hover:text-(--color-primary-light) transition">
             About
           </NavLink>
         </li>
         <li>
-          <NavLink to="/listings" className="hover:text-brand-light transition">
+          <NavLink to="/listings" className="hover:text-(--color-primary-light) transition">
             Listings
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" className="hover:text-brand-light transition">
+          <NavLink to="/contact" className="hover:text-(--color-primary-light) transition">
             Contact
           </NavLink>
         </li>
         <li>
-          <NavLink to="/terms" className="hover:text-brand-light transition">
+          <NavLink to="/terms" className="hover:text-(--color-primary-light) transition">
             Terms & Conditions
           </NavLink>
         </li>
         <li>
-          <NavLink to="/privacy" className="hover:text-brand-light transition">
+          <NavLink to="/privacy" className="hover:text-(--color-primary-light) transition">
             Privacy Policy
           </NavLink>
         </li>

@@ -1,22 +1,28 @@
 // src/sections/MissionSection.jsx
 import React from 'react';
+import { NavLink } from 'react-router';
+import Section from '../../container/Section';
+import Heading from '../../components/Heading';
+import Body from '../../components/Body';
+import Button from '../../components/Button';
 
 const MissionSection = () => {
   return (
-    <section className="bg-teal-600 text-white py-24">
+    <Section variant='tertiary' id="mission">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
-        <p className="text-lg max-w-3xl mx-auto mb-8">
+        <Heading>
+          Our Mission
+        </Heading>
+        <Body>
           We're here to empower every homebuyer and seller with honest advice, expert guidance, and modern digital tools — so your real estate journey is smooth from the very first step.
-        </p>
-        <a
-          href="/contact"
-          className="bg-white text-teal-600 px-6 py-3 rounded-full hover:bg-teal-700 hover:text-white transition"
-        >
-          Talk to an Agent
-        </a>
+        </Body>
+        <div className='flex justify-center'>
+          <Button variant="secondary" type="link" to="/contact">
+            Talk to an Agent
+          </Button>
+        </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

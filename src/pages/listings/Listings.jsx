@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import placeholder from "../../assets/sample_listing.png";
 import { listings as initialListings } from '../../data';
 import { NavLink } from 'react-router';
+import Section from './../../container/Section';
+import Heading from './../../components/Heading'
+import Page from '../../container/Page'
 
 const Listings = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,11 +23,13 @@ const Listings = () => {
   });
 
   return (
-    <section className="bg-white py-20 px-4">
+    <Page>
+
+<Section>
       <div className="max-w-screen-xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+        <Heading>
           Available Properties
-        </h2>
+        </Heading>
 
         {/* Filters */}
         <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -111,7 +116,8 @@ const Listings = () => {
           </div>
         )}
       </div>
-    </section>
+    </Section>
+    </Page>
   );
 };
 

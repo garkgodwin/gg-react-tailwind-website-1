@@ -1,14 +1,17 @@
 import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react'; // optional icon package
+import Section from './../../container/Section';
+import Heading from './../../components/Heading';
+import Body from './../../components/Body';
 
 const ContactInfoSection = () => {
   return (
-    <section className="bg-white py-20">
+    <Section>
       <div className="max-w-screen-md mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
-        <p className="text-lg text-gray-600 mb-8">
-          Reach out to us — we’d love to hear from you.
-        </p>
+        <Heading>Contact Information</Heading>
+        <Body>
+          Reach out to us — we'd love to hear from you.
+        </Body>
         <div className="space-y-4 text-gray-700 text-sm">
           <div className="flex items-center justify-center gap-2">
             <Phone className="w-4 h-4 text-teal-600" />
@@ -24,7 +27,7 @@ const ContactInfoSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

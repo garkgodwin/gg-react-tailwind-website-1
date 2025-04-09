@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Section from '../../container/Section'
+import Heading from './../../components/Heading';
+import Button from './../../components/Button';
 
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -14,9 +17,9 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-20">
+    <Section variant="secondary">
       <div className="max-w-screen-md mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-10">Get In Touch</h2>
+        <Heading>Get In Touch</Heading>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid sm:grid-cols-2 gap-6">
             <input
@@ -26,7 +29,7 @@ const ContactFormSection = () => {
               aria-label="Your Name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500"
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 bg-white"
               required
             />
             <input
@@ -36,7 +39,7 @@ const ContactFormSection = () => {
               aria-label="Your Email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500"
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 bg-white"
               required
             />
           </div>
@@ -47,18 +50,17 @@ const ContactFormSection = () => {
             value={formData.message}
             onChange={handleInputChange}
             rows={5}
-            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500"
+            className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 bg-white"
             required
           />
-          <button
-            type="submit"
-            className="bg-teal-600 text-white px-6 py-3 rounded-full hover:bg-teal-700 transition w-full sm:w-auto"
-          >
-            Send Message
-          </button>
+          <div className="flex justify-end">
+            <Button type="submit">
+              Send Message
+            </Button>
+          </div>
         </form>
       </div>
-    </section>
+    </Section>
   );
 };
 

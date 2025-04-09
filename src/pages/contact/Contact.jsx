@@ -3,10 +3,11 @@ import React from 'react';
 import ContactInfoSection from './ContactInfoSection';
 import ContactFormSection from './ContactFormSection';
 import MapSection from './MapSection';
+import Page from '../../container/Page'
 
 const Contact = () => {
   return (
-    <div>
+    <Page>
       {/* Contact Info Section */}
       <ContactInfoSection />
 
@@ -15,7 +16,7 @@ const Contact = () => {
 
       {/* Map Section */}
       <MapSection />
-    </div>
+    </Page>
   );
 };
 
