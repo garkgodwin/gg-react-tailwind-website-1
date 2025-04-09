@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router';
+import { motion, AnimatePresence } from 'framer-motion';
 import garkLogo from '../assets/gark_logo.png';
 
 const Navbar = () => {
@@ -61,21 +62,30 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
+      
+      <AnimatePresence>
       {isMenuOpen && (
-        <div className="md:hidden bg-white px-6 py-4 space-y-4 text-center font-medium text-text-body">
+        <motion.div 
+          key="mobile-menu"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2, ease: 'easeInOut' }}
+          className="md:hidden bg-white px-6 py-4 space-y-4 text-center font-medium text-text-body">
           <NavLink to="/" className="block hover:text-(--color-primary)" onClick={toggleMenu}>Home</NavLink>
           <NavLink to="/about" className="block hover:text-(--color-primary)" onClick={toggleMenu}>About</NavLink>
           <NavLink to="/listings" className="block hover:text-(--color-primary)" onClick={toggleMenu}>Listings</NavLink>
           <NavLink to="/contact" className="block hover:text-(--color-primary)" onClick={toggleMenu}>Contact</NavLink>
           <NavLink
             to="/contact"
-            className="inline-block bg-brand text-white px-4 py-2 rounded-full hover:bg-brand-dark transition"
+            className="inline-block bg-(--color-primary) text-white px-4 py-2 rounded-full hover:bg-(--color-primary-dark) transition"
             onClick={toggleMenu}
           >
             Get Started
           </NavLink>
-        </div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </nav>
   );
 };
